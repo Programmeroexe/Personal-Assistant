@@ -1,0 +1,42 @@
+1️⃣ Basics - Getting Urwid Running
+🔹 Install Urwid:
+
+bash
+Copy
+Edit
+pip install urwid                                                      (DONE)
+🔹 Display simple text                                                 (DONE) 
+🔹 Handle basic keyboard input (q to quit)				(DONE)
+
+2️⃣ Layouts - Structuring Your UI
+🔹 Padding & Alignment (Position elements properly)
+🔹 Box & Flow Layouts (Control how widgets stack)
+🔹 Columns & Grids (Divide the terminal into sections)
+🔹 Frames (Header, Footer, and Body)
+
+3️⃣ Widgets - Adding UI Elements
+🔹 Text (Static & live-updating)
+🔹 Buttons (Clickable elements)
+🔹 Edit Fields (User input)
+🔹 Checklists & Radio Buttons
+🔹 Progress Bars (Loading animations)
+
+4️⃣ Event Handling - Making UI Interactive
+🔹 Detect key presses (on_press events)
+🔹 Handle button clicks
+🔹 Capture text input dynamically
+
+5️⃣ Dynamic UI - Updating Without Clearing the Screen
+🔹 Refresh only parts of the UI (instead of full redraw)
+🔹 Live-update sections without flickering
+🔹 Handle real-time changes (e.g., timers, progress updates)
+
+6️⃣ Advanced Features - Making a Pro-Level Terminal App
+🔹 Tabs & Menus (Multiple screens inside one app)
+🔹 Scrollable Lists & Tables
+🔹 Mouse Support (Clicking instead of just keyboard)
+🔹 Async Operations (Fetching external data in real-time)
+
+🚀 Final Goal: Build a multi-window assistant with interactive elements, a dynamic dashboard, and smooth updates.
+
+Tell me where you wanna start, lad, and I'll guide you hands-on! 😎🔥
