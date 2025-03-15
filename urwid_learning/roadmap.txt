@@ -6,7 +6,7 @@ Copy
 Edit
 pip install urwid                                                      (DONE)
 🔹 Display simple text                                                 (DONE) 
-🔹 Handle basic keyboard input (q to quit)				(DONE)
+🔹 Handle basic keyboard input (q to quit)				               (DONE)
 
 2️⃣ Layouts - Structuring Your UI
 🔹 Padding & Alignment (Position elements properly)
