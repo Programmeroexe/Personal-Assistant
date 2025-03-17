@@ -1,4 +1,4 @@
-import storage
+import brain
 from pyfiglet import Figlet
 import colorama
 colorama.init()
