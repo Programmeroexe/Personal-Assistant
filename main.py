@@ -14,25 +14,18 @@ import brain
 from pyfiglet import Figlet
 import urwid
 
-# Set 256-color mode for Urwid
-screen = urwid.raw_display.Screen()
-screen.set_terminal_properties(colors=256)
+class TUI():
+    def __init__(self):
 
-def ascii_text(text, font="3D-ASCII", width=120):
-    f = Figlet(font=font, width=width)
-    return f.renderText(text)
+        self.window = urwid.MainLoop(urwid.Filler(urwid.Text('')))
+    
+    def text_into_ascii(self, text, font = "big"):
+        figlet_setting = Figlet(font=font)
+        string = figlet_setting.renderText("persistence".upper())
+        return str(string)
 
-def on_q(key):
-    if key in ('esc',):
-        raise urwid.ExitMainLoop()
+    def run(self):
+        self.window.run()
 
-# ✅ Use named colors OR enable 256-color mode
-palette = [
-    ('banner', '#ff8400', 'black')  # ✅ Using named colors instead of hex
-]
-
-window = urwid.Text(('banner', ascii_text("PERSISTENCE", font="big")))
-
-filler = urwid.Filler(window)
-engine = urwid.MainLoop(filler, screen=screen, unhandled_input=on_q, palette=palette)
-engine.run()
+app = TUI()
+app.text_into_ascii("hi")
