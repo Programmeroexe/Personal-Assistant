@@ -19,12 +19,12 @@ class brain:
         with open(self.storage,'w') as f:
             f.write(json_data)
 
-    def current_date(self):
+    def current_date():
         today_time = datetime.datetime.now()
         
         return today_time.strftime("%d/%B/%Y")
 
-    def current_time(self):
+    def current_time():
         today_date = datetime.datetime.now()
         return today_date.strftime("%I:%M:%S %p")
     
@@ -37,9 +37,9 @@ class brain:
     weight,
     unit,
     weight_time, 
-    weight_date=current_date("self"),
-    recording_time=current_time("self"), 
-    recording_date=current_date("self")
+    weight_date=current_date(),
+    recording_time=current_time(), 
+    recording_date=current_date()
     ): # really didnt know what to put here so putted anything lol
     
         """ weight dict must contain 
@@ -56,10 +56,14 @@ class brain:
         }
         json_data = json.dumps(storage_json_to_dict,indent=4)
         self.write_storage(json_data)
-
-
+    
+    def delete_daily_weight(self, date):
+        storage_json_to_dict = json.loads(self.read_storage())
+        without_date = storage_json_to_dict['weight_tracker'].pop(date,None)
+        return storage_json_to_dict
 if __name__ == "__main__":
     brain = brain()
-    brain.generate_storage_template("test_storage.json")
+    # brain.generate_storage_template("test_storage.json")
     brain.set_storage_location('test_storage.json')
     brain.add_daily_weight(80, "kg", "night")
+    print(brain.delete_daily_weight("17/March/2025"))
